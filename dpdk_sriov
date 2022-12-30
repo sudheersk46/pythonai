@@ -1,0 +1,55 @@
+DPDK and SRIOV 
+
+ https://telcocloudbridge.com/blog/dpdk-vs-sr-iov-for-nfv-why-a-wrong-decision-can-impact-performance/
+
+DPDK:
+By default Linux uses kernel to process packets, this puts pressure on kernel to process packets faster as the NICs (Network Interface Card) speeds are increasing at fast.
+
+For normal packet processing, packets from NIC are pushed to Linux kernel before reaching the application.
+However, the introduction of DPDK (Data Plane Developer Kit), changes the landscape, as the application can talk directly to the NIC completely bypassing the Linux kernel.
+Indeed fast switching, isn’t it?
+Without DPDK, packet processing is through the kernel network stack which is interrupt-driven. Each time NIC receives incoming packets, there is a kernel interrupt to process the packets and a context switch from kernel space to user space. This creates delay.
+With the DPDK, there is no need for interrupts, as the processing happens in user space using Poll mode drivers. These poll mode drivers can poll data directly from NIC, thus provide fast switching by completely bypassing kernel space. This improves the throughput rate of data.
+
+
+OVS:
+
+An OVS is shown as part of the VNF implementation. OVS sits in the hypervisor. Traffic can easily transfer from one VNF to another VNF through the OVS as shown
+
+Open vSwitch can be combined with DPDK for better performance, resulting in a DPDK-accelerated OVS (OVS+DPDK). The goal is to replace the standard OVS kernel forwarding path with a DPDK-based forwarding path, creating a user-space vSwitch on the host, which uses DPDK internally for its packet forwarding. This increases the performance of OVS switch as it is entirely running in user space as shown below.
+
+ OVS that is a purely software-based solution.
+ 
+SRIOV: The SR-IOV specification defines a standardized mechanism to virtualize PCIe devices.  This mechanism can virtualize a single PCIe Ethernet controller to appear as multiple PCIe devices.
+By creating virtual slices of PCIe devices, each virtual slice can be assigned to a single VM/VNF thereby eliminating the issue that happened because of limited NICs
+Multiple Virtual Functions ( VFs) are created on a shared NIC. These virtual slices are created and presented to the VNFs.
+SR-IOV is a better solution as it uses hardware-based switching 
+
+DPDK and SRIOV and can be seperately used with different combination
+
+DPDK: Create a separate namespace to manage  packet forwarding instead of kernel to reduce load on kerne
+OVS: uses hypervisor to create VNF
+
+DPDK: Data Plane Development kit
+DPDP with OVS <uses hypervisor> OVS: Open switch
+
+DPDK with OVS+VNF<uses hypervisor> VNF: virtual Network Function 
+SRIOV<no hyper visor for vnic> Single root I/O virtualization:  A single physical PCI Express bus can be shared in a virtual environment using the SR-IOV specification
+Do not use hypervisor 
+Sriov architecture
+https://learn.microsoft.com/en-gb/windows-hardware/drivers/network/sr-iov-architecture
+
+
+
+while there could be a mix of two in which SR-IOV can be combined with DPDK)
+DPDK+SRIOV
+
+
+https://medium.com/@jay.responsys/opnfv-nfv-vim-sriov-ovs-dpdk-48345cd22b84
+
+
+
+ Types for Traffic  flow
+
+East-West  : East-West: Within same server<data center>
+North-South: with different server<different data centre>
