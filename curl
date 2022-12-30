@@ -77,3 +77,11 @@ echo | openssl s_client -showcerts -connect dev-testsatellite:443
 https://stackoverflow.com/questions/3478/client-ssl-with-self-signed-ca-not-working
 https://access.redhat.com/solutions/308
 
+
+check cert
+
+Openssl x509 -in oleculetest.local.pem —text —not
+
+openssl x509 -in vybj_chain.pem  -text -noout
+
+chain: includes combination of certs /multiple certs combined
