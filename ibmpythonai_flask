@@ -1,0 +1,1371 @@
+Python
+
+
+
+Object:
+
+Everything in python is object
+
+Object are instance of type or class
+
+
+Every object has a type
+
+To interact with object we use methods
+
+When assigned something to var it become object
+
+T=“hello”
+
+y=[1,2,3]
+
+T is instance(object) of type string
+
+Y is instance(object)  of type list
+
+Class function:
+    def __init__(self,name):
+       Self.name=name
+
+    Def display(self)
+        return hello+name”
+t=function()
+
+T is instance(object) of class
+
+t.name
+t.display()
+
+
+
+return function:
+
+- [ ] Only one return can be used in a function: if multiple used first return be give the value
+- [ ] Return must be assign to a object or used with print to  see its output
+
+1> class function:
+    def __init__(self,name):
+       self.name=name
+
+    def display(self):
+        print("hello " + self.name)
+        return "hello"+ self.name”
+        return f"The {self.name}”
+
+print(t.name)
+print(t.display())
+
+
+
+
+2> class function:
+    def __init__(self,name):
+       self.name=name
+
+    def display(self):
+        print("hello " + self.name)
+        return "hello"+ self.name
+         Or
+        return f"The {self.name}”
+
+
+t=function("sk")
+
+#T is instance(object) of class
+
+print(t.name)
+t.display()
+p=t.display()
+print(p)
+
+Or 
+
+
+print(t.name)
+print(t.display())
+
+
+
+
+
+
+Method
+
+
+Methods  are function that  instance of class provides
+
+Used Interact with data in a object
+
+Call it by adding period ,  method name(function) and  paretnhesis
+
+t.square()
+
+
+Class test(object):
+
+def_init__(self,a)   self.a=a
+
+def squqre(a):
+   return a+a:
+
+t=test(4)
+t.square() <Is is method and insane of class test>   Constructor:   Function Used to initialise the data attribute  Function __init__ used  as constructor 
+def_init__(self,a)   self.a=a
+
+List attributes and methods with
+
+dir(classname)
+
+
+Constructor:
+
+Function used to initialise object for a class or function
+
+
+Def __init__(self, alb)
+self.a=a
+Self.b=b
+
+
+Decorator: 
+
+Calling another function within a  function
+
+
+1. def jsonify_decorator(function):
+2.     def modifyOutput():
+3.         return {"output":function()}
+4.     return modifyOutput
+5. 
+6. @jsonify_decorator
+7. def hello():
+8.     return 'hello world'
+9. 
+10. @jsonify_decorator
+11. def add():
+12.     num1 = input("Enter a number - ")
+13.     num2 = input("Enter another number - ")
+14.     return int(num1)+int(num2)
+15. 
+16. print(hello())
+17. print(add())
+Copied!
+The method decorator is also referred to as the wrapper, which wraps the output of the function, that it decorates. In the above code sample, jsonify-decorator is the decorator method. We have added this decorator to hello() and add(). The output of these method calls will now be wrapped and decorated with the jsonify_decorator.
+
+
+Route decorator
+
+@app.route(“/“) is a Python decorator that Flask provides to assign URLs in our app to functions easily. You can easily tell that the decorator is telling our @app that whenever a user visits our application’s domain, in our case, execute the home() function.
+We can handle multiple routes with a single function by just stacking additional route decorators above the method which should be invoked when the route is called. The following is a valid example of serving the same “Hello World!” message for 3 separate routes:
+* 		1
+* 		2
+* 		3
+* 		4
+* 		5
+1. @app.route("/")
+2. @app.route("/home")
+3. @app.route("/index")
+4. def home():
+5.     return "Hello World!"
+
+The route decorators also take method as a second parameter, which can be set to the type of HTTP methods, the route will support. We will learn about this in the later sections.
+The route decorator can also be more specific. For example, to get the details of a user whose userId is U0001, you may go to http://mydomain.com/userdetails/U0001. It doesn’t make sense to define a different route for each user you may be dealing with. In such cases, we define the route like this.
+* 		1
+* 		2
+* 		3
+1. @app.route("/userdetails/<userid>")
+2. def getUserDetails(userid):
+3.     return "User Details for  "+userid
+
+
+
+
+List Modules
+
+
+import ssl
+print(dir(ssl))
+
+Prints class without error then no issues
+
+https://stackoverflow.com/questions/64153900/attributeerror-module-ssl-has-no-attribute-sslerror
+
+
+List all function and modules
+
+http://www.learningaboutelectronics.com/Articles/How-to-list-all-functions-and-attributes-of-a-module-in-Python.php#:~:text=So%20in%20Python%2C%20there%20is,attributes%20of%20the%20os%20module.
+
+>>> import os 
+
+>>> print(dir(os))
+
+
+import ssl
+>>> print(dir(ssl))
+
+, 'MemoryBIO', 'OPENSSL_VERSION', 'OPENSSL_VERSION_INFO', 'OPENSSL_VERSION_NUMBER', 'OP_ALL', 'OP_CIPHER_SERVER_PREFERENCE', 'OP_ENABLE_MIDDLEBOX_COMPAT', 'OP_NO_COMPRESSION', 'OP_NO_SSLv2', 'OP_NO_SSLv3', 'OP_NO_TICKET', 'OP_NO_TLSv1', 'OP_NO_TLSv1_1', 'OP_NO_TLSv1_2', 'OP_NO_TLSv1_3', 'OP_SINGLE_DH_USE', 'OP_SINGLE_ECDH_USE', 'Options', 'PEM_FOOTER', 'PEM_HEADER', 'PEM_cert_to_DER_cert', 'PROTOCOL_SSLv23', 'PROTOCOL_TLS', 'PROTOCOL_TLS_CLIENT', 'PROTOCOL_TLS_SERVER', 'PROTOCOL_TLSv1', 'PROTOCOL_TLSv1_1', 'PROTOCOL_TLSv1_2', 'Purpose', 'RAND_add', 'RAND_bytes', 'RAND_pseudo_bytes', 'RAND_status', 'SOCK_STREAM', 'SOL_SOCKET', 'SO_TYPE', 'SSLContext', 'SSLEOFError', 'SSLError', 'SSLErrorNumber', 'SSLObject', 'SSLSession', 'SSLSocket', 'SSLSyscallError', 'SSLWantReadError', 'SSLWantWriteError', 'SSLZeroReturnError', 'SSL_ERROR_EOF', 'SSL_ERROR_INVALID_ERROR_CODE', 'SSL_ERROR_SSL', 'SSL_ERROR_SYSCALL', 'SSL_ERROR_WANT_CONNECT', 'SSL_ERROR_WANT_READ', 'SSL_ERROR_WANT_WRITE', 'SSL_ERROR_WANT_X509_LOOKUP', 'SSL_ERROR_ZERO_RETURN', 'VERIFY_CRL_CHECK_CHAIN', 'VERIFY_CRL_CHECK_LEAF', 'VERIFY_DEFAULT', 'VERIFY_X509_STRICT', 'VERIFY_X509_TRUSTED_FIRST', 'VerifyFlags', 'VerifyMode', '_ASN1Object', '_DEFAULT_CIPHERS', '_Enum', '_IntEnum', '_IntFlag', '_OPENSSL_API_VERSION', '_PROTOCOL_NAMES', '_RESTRICTED_SERVER_CIPHERS', '_SSLContext', '_SSLMethod', '_SSLv2_IF_EXISTS', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', '_create_default_https_context', '_create_stdlib_context', '_create_unverified_context', '_dnsname_match', '_ipaddress_match', '_nid2obj', '_ssl', '_txt2obj', 'base64', 'cert_time_to_seconds', 'create_connection', 'create_default_context', 'errno', 'get_default_verify_paths', 'get_protocol_name', 'get_server_certificate', 'ipaddress', 'match_hostname', 'namedtuple', 'os', 're', 'socket', 'socket_error', 'sys', 'textwrap', 'warnings', 'wrap_socket']
+>>> 
+
+Convert  module output to list
+
+
+List methods on modules:
+
+tt=dir(ssl)
+
+
+type(tt)
+
+List all methods on lists “tt”
+print(dir(tt))
+
+
+Check no module error:
+
+ ssl_context.minimum_version = ssl.TLSVersion.TLSv1_2
+AttributeError: module 'ssl' has no attribute 'TLSVersion'
+
+
+Check module gibing error
+
+print(ssl.TLSVersion.TLSv1_2) <If no error no issue with module)
+
+Check if the module exists
+
+
+Import ssl
+
+print(dir(ssl))
+
+
+Get module path
+
+>>> print(ssl.__file__)
+/usr/lib/python3.8/ssl.py
+
+
+
+
+
+Fix modules issue form different version
+
+
+$ sudo mv /usr/lib/python3.6/ssl.py   /usr/lib/python3.6/ssl.py.back
+$ sudo cp /usr/lib/python3.8/ssl.py   /usr/lib/python3.6/
+
+Or
+Copy the site-packages
+/home/theia/.local/lib/python3.6/site-packages/ibm_cloud_sdk_core/utils.py",
+
+
+
+Or do
+
+pip install ssl
+
+pip3 install  ssl
+
+Using retired version
+
+
+
+File I/O 
+
+function open is sued to open and read/write/append file 
+
+Has method read
+
+Other methods 
+
+Read: create a new file /open a existing file
+Readline: read one line
+Readlines
+Readlines(4): first 5 char is read, next time when called it will continue from the  next lines
+Write: to write to a file, overwritten if already exists , to write a file open file with w/a mode
+Close
+
+Mode:r,w,a
+
+* r+ : Reading and writing. Cannot truncate the file.
+* w+ : Writing and reading. Truncates the file.
+* a+ : Appending and Reading. Creates a new file, if none exists.
+
+f=open(path/name,mode)
+
+Name: dir/filename, mode: r,w,a
+f.read()
+f.name
+f.mode
+
+With open function we need to use f.close() expicitly after the file is opened
+
+But “with open(name.,mode) as file“  no need of close is called at the end on its own
+
+* .tell() - returns the current position in bytes
+* .seek(offset,from) - changes the position by 'offset' bytes with respect to 'from'. From can take the value of 0,1,2 corresponding to beginning, relative to current position and end
+
+
+from random import randint as rnd
+
+memReg = 'members.txt'
+exReg = 'inactive.txt'
+fee =('yes','no')
+
+def genFiles(current,old):
+    with open(current,'w+') as writefile: 
+        writefile.write('Membership No  Date Joined  Active  \n')
+        data = "{:^13}  {:<11}  {:<6}\n"
+
+        for rowno in range(20):
+            date = str(rnd(2015,2020))+ '-' + str(rnd(1,12))+'-'+str(rnd(1,25))
+            writefile.write(data.format(rnd(10000,99999),date,fee[rnd(0,1)]))
+
+
+    with open(old,'w+') as writefile: 
+        writefile.write('Membership No  Date Joined  Active  \n')
+        data = "{:^13}  {:<11}  {:<6}\n"
+        for rowno in range(3):
+            date = str(rnd(2015,2020))+ '-' + str(rnd(1,12))+'-'+str(rnd(1,25))
+            writefile.write(data.format(rnd(10000,99999),date,fee[1]))
+
+
+genFiles(memReg,exReg)
+
+
+Pandas 
+
+
+Used for data analysis
+
+Dataframes are dictionary provides corresponding output on rows and columms
+
+
+df=dataframe
+
+Indices to show 1st row and column
+
+df.ix[0,0]
+
+
+df[‘dataframename]
+
+df[‘dataframename,dataframename2]
+
+df[‘dataframename]>1980
+
+df.to_csv(‘new.csv’)
+
+Other methods
+
+read_csv
+
+import pandas as pd
+Ex:
+
+x = {'Name': ['Rose','John', 'Jane', 'Mary'], 'ID': [1, 2, 3, 4], 'Department': ['Architect Group', 'Software Group', 'Design Team', 'Infrastructure'], 
+      'Salary':[100000, 80000, 50000, 60000]}
+
+#casting the dictionary to a DataFrame
+df = pd.DataFrame(x)
+
+#display the result df
+df
+
+<div><br class="Apple-interchange-newline">#Retrieving the "ID" column and assigning it to a variable x
+x = df[['ID']]
+
+
+#Retrieving the "ID" column and assigning it to a variable x
+x = df[['ID’]]
+X
+
+Let's use the type() function and check the type of the variable.#check the type of x
+type(x)
+pandas.core.frame.DataFrame
+
+loc() is a label-based data selecting method which means that we have to pass the name of the row or column that we want to select. This method includes the last element of the range passed in it.
+Simple syntax for your understanding:
+* loc[row_label, column_label]
+iloc() is an indexed-based selecting method which means that we have to pass integer index in the method to select a specific row/column. This method does not include the last element of the range passed in it.
+Simple syntax for your understanding:
+* iloc[row_index, column_index]
+Let us see some examples on the same
+
+# Access the value on the first row and the first column
+
+iloc: used for only index location with slicing option: all the inputs must be indices
+
+Loc : used with index and data frame field with slicing options , one input must be index and second must be df
+​
+df.iloc[0, 0]’
+Rose'
+# Access the value on the first row and the third column
+​
+df.iloc[0,2]
+# Access the column using the name
+​
+df.loc[0, 'Salary']
+100000
+
+df2=df
+df2=df2.set_index("Name")
+
+Exercise 3: Slicing
+Slicing uses the [] operator to select a set of rows and/or columns from a DataFrame.
+To slice out a set of rows, you use this syntax: data[start:stop],
+here the start represents the index from where to consider, and stop represents the index one step BEYOND the row you want to select. You can perform slicing using both the index and the name of the column.
+
+Dependency
+
+!pip install xlrd: csv
+pip install openpyxl: excel
+
+
+Loading files
+
+
+xlsx_path = 'https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/PY0101EN/Chapter%204/Datasets/TopSellingAlbums.xlsx'
+
+df = pd.read_excel(xlsx_path)
+df.head()
+
+csv_path = 'https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/labs/Module%204/data/TopSellingAlbums.csv'
+df = pd.read_csv(csv_path)
+
+
+
+Numpy: create 1d arrays , ND array
+
+
+
+Data type: numpy.ndarray
+
+
+Linespace: uses start , end and provides with distance between both
+Dot: used for dot matrix multiplication
+
+
+Matplotlin.pyplot used to provide graph from the inputs
+
+Import Matplotlin.pyplot  as pl
+pl.plot(x,y)
+
+
+a=np.array([“one”,1,3,”two”])
+
+a.size
+a.ndim
+a.shape
+a[0]
+a[1:3]
+
+
+Vector addition and subtraction:linear combination
+
+u=[0
+      1]
+v=[0
+      1]
+
+z=u+v
+The first component of z is the addition of the first component of vectors u and v. Similarly, the second component is the sum of the second components of u and v. This new vector z is now a linear combination of the vector u and v
+
+
+Slower with. Normal code
+
+u=[0,1]
+v=[0,1]
+Z-[]
+
+For n.m in zip(u,v)
+  Z.append(n+m)
+
+
+Same operation using  one line  using numpty code as below
+
+u=np.array([0,1])
+v=np.array([0,1])
+z=u-v
+
+
+Scalar multiplication
+
+u=np.array([0,1])
+
+y=2u
+
+Or
+
+y=2*u
+
+
+With normal code: slower 
+
+u=[0,1]
+y=[]
+
+For n in u:
+  y.append(2n)
+
+
+Dot product operation
+u=np.array([0,1])
+v=np.array([0,1])
+
+z=np.dot(u,v)
+
+0*0 + 1*1 = 1
+
+Broadcasting: operations will be run on all elements 
+
+u=np.array([0,1])
+z=u+1
+
+z=[1,2]
+
+
+Universal functions
+
+a=np.array([0,1])
+y=a.mean()
+y=a.max()
+y=a.min()
+
+
+1 0 1
+2 2 2
+
+
+X=np.array([[1,0],[0,1]])
+Y=np.array([[2,1],[1,2]]) 
+z=np.dot(x,y)
+
+For dot matrix  no of rows  in Matrix must match no of col in other matrix
+
+X
+1 0
+0 1 
+
+Y
+2 1
+1 2
+
+Dot matrix : row* col
+1st row multiolicatow with 1st column
+
+
+1*2+0*1 : 2 
+
+1st row multilaction with second column
+
+1*1+0*2 1
+
+So [2,1 ]
+
+2nd row 1st col 
+
+0*2+1*1 : 1
+
+2nd row 2nd col 
+
+0*1 + 1*2 : 2
+
+[1,2]
+
+
+z=np.dot(x,y): [[2,1].[1,2]}
+
+#import library
+import pandas as pd
+import numpy as np
+
+#creating a dataframe
+df=pd.DataFrame(np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]), columns=['a', 'b', 'c'])
+df
+
+
+df = df.transform(func = lambda x : x + 10)
+df
+
+
+
+
+API: Application program interface
+
+PyCoinGecko.
+
+An API lets two pieces of software talk to each other. For example, you have your program, you have some data, and you have other software components. You use the API to communicate with other software via inputs and outputs. Just like a function, you don’t have to know how the API works, just its inputs and outputs
+
+
+REST APIs are another popular type of API; they allow you to communicate through the internet letting you to take advantage of resources like storage, access more data, artificial intelligent algorithms, and much more. The RE stands for Representational, the S stands for State, the T stand for Transfer. In rest APIs your program is called the client. The API communicates with a web service you call through the internet. There is a set of rules regarding Communication, Input or Request, and Output or Response
+
+
+The RE stands for Representational, the S stands for State, the T stand for Transfer 
+
+Works on https to send request from client and get response from resource/server uses jsonformat
+
+
+Url; uniform resource locator
+
+Uses 3  things
+
+Uniform resource locator (URL) is the most popular way to find resources on the web. We can break the URL into three parts.
+* scheme this is this protocol, for this lab it will always be http://
+* Internet address or Base URL this will be used to find the location here are some examples: www.ibm.com and  www.gitlab.com 
+* route location on the web server for example: /images/IDSNlogo.png
+
+
+http status code
+
+1XX: all ok so far
+2XX: connection ok
+3xx: redirection
+
+4XX: issue
+401: authorisation
+403: forbidden
+404: not found
+
+5xx: server error
+
+http method
+
+Get  post  put delete(CRUD): Create , read, update and delete
+
+Python module’
+
+Import requests < url lib,httplib:library>
+import os 
+from PIL import Image
+from IPython.display import IFrame
+
+
+url='https://www.ibm.com/'
+r=requests.get(url)
+
+Request methods
+
+r.status_code
+r.request_body
+r.headers
+r.headers['Content-Type']
+ r.encoding
+ r.text[0:80]
+r.json()
+
+
+Get request
+
+
+url_get='http://httpbin.org/get'
+payload={"name":"Joseph","ID":"123"}
+r=requests.get(url_get,params=payload)
+r.url
+'http://httpbin.org/get?name=Joseph&ID=123'
+
+
+Post send information in body unlike in url as get request
+url_post='http://httpbin.org/post'
+r_post=requests.post(url_post,data=payload)
+
+print("POST request URL:",r_post.url )
+print("GET request URL:",r.url)
+
+
+Image.open(path)  
+
+
+
+
+Use to get json tp data frame
+Import requests
+Import pandas as pd
+data2 = requests.get("https://www.fishwatch.gov/api/species")
+results2 = json.loads(data2.text)
+df3=pd.DataFrame(results2)
+df3
+
+The result is in a nested json format. The 'nutrition' column contains multiple subcolumns, so the data needs to be 'flattened' or normalized.
+
+
+df2 = pd.json_normalize(results)
+
+
+HTML/webscraping
+
+Import requests
+From bs4 Import beautifulsoup  : used for iteracting  with html pages>
+
+
+html="<!DOCTYPE html><html><head><title>Page Title</title></head><body><h3><b id='boldest'>Lebron James</b></h3><p> Salary: $ 92,000,000 </p><h3> Stephen Curry</h3><p> Salary: $85,000, 000 </p><h3> Kevin Durant </h3><p> Salary: $73,200, 000</p></body></html>"
+
+soup = BeautifulSoup(html, "html.parser")
+
+
+
+tag_object=soup.title
+print("tag object:",tag_object)
+
+tag_child =tag_object.b
+tag_child
+
+tag_object=soup.h3
+tag_object
+
+parent_tag=tag_child.parent
+parent_tag
+
+sibling_1=tag_object.next_sibling
+sibling_1
+
+tag_child.attrs
+
+tag_child['id’]
+tag_child.get('id')
+
+
+table_rows=table_bs.find_all('tr')
+table_rows
+
+We can use the method <code>prettify()</code> to display the HTML in the nested structure:
+
+table_bs.find_all(href=False)
+
+table_bs.find_all(string="Florida")
+
+
+print(soup.prettify())
+
+table_bs = BeautifulSoup(table, "html.parser")
+
+
+Html with pandas
+
+
+
+
+
+population_data = pd.DataFrame(columns=["Rank", "Country", "Population", "Area", "Density"])
+
+for row in tables[table_index].tbody.find_all("tr"):
+    col = row.find_all("td")
+    if (col != []):
+        rank = col[0].text
+        country = col[1].text
+        population = col[2].text.strip()
+        area = col[3].text.strip()
+        density = col[4].text.strip()
+        population_data = population_data.append({"Rank":rank, "Country":country, "Population":population, "Area":area, "Density":density}, ignore_index=True)
+
+population_data
+
+
+pd.read_html(url, match="10 most densely populated countries", flavor='bs4')[0]
+
+
+
+Csv
+
+read_csv
+filename = "https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/labs/Module%205/data/diabetes.csv"
+
+async def download(url, filename):
+    response = await pyfetch(url)
+    if response.status == 200:
+        with open(filename, "wb") as f:
+            f.write(await response.bytes())
+
+await download(filename, "diabetes.csv")
+df = pd.read_csv("diabetes.csv")
+
+
+Json
+
+import json 
+  
+# Opening JSON file 
+with open('sample.json', 'r') as openfile: 
+  
+    # Reading from json file 
+    json_object = json.load(openfile) 
+  
+print(json_object) 
+print(type(json_object)) 
+
+Import json
+
+Json.load(file)
+
+For xml
+
+
+Import xml.etree.ElementTree as etree
+
+tree=etree.parse(file.xml)
+root=tree.getroot()
+
+colimns=[‘name’,’birthday’]
+df=pd.DataFreame(columns = columns)
+
+
+Excel
+
+
+filename = "https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/labs/Module%205/data/file_example_XLSX_10.xlsx"
+
+async def download(url, filename):
+    response = await pyfetch(url)
+    if response.status == 200:
+        with open(filename, "wb") as f:
+            f.write(await response.bytes())
+
+await download(filename, "file_example_XLSX_10.xlsx")
+
+df = pd.read_excel("file_example_XLSX_10.xlsx")
+
+
+Image
+
+ importing PIL 
+from PIL import Image 
+
+# Uncomment if running locally
+# import urllib.request
+# urllib.request.urlretrieve("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg", "dog.jpg")
+
+filename = "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg"
+
+async def download(url, filename):
+    response = await pyfetch(url)
+    if response.status == 200:
+        with open(filename, "wb") as f:
+            f.write(await response.bytes())
+
+await download(filename, "dog.jpg")
+
+
+Visualization:
+
+
+
+
+
+
+
+Python Project for AI & Application Development:
+
+
+
+
+Unit testing:  create 2 files
+
+
+
+mymodule.py
+
+
+def square(number):
+    """
+    This function returns the square of a given number
+    """
+    return number ** 2
+def double(number):
+    """
+    This function returns twice the value of a given number
+    """
+    return number * 2
+
+def add(a,b):
+    """
+    This function returns the sum of the given numbers
+    """
+    return a + b
+
+
+
+
+
+test_mymodule.py
+
+
+1. import unittest
+2. from mymodule import square, double, add
+3. class TestSquare(unittest.TestCase): 
+4.     def test1(self): 
+5.         self.assertEqual(square(2), 4) # test when 2 is given as input the output is 4.
+6.         self.assertEqual(square(3.0), 9.0)  # test when 3.0 is given as input the output is 9.0.
+7.         self.assertNotEqual(square(-3), -9)  # test when -3 is given as input the output is not -9.
+8.         
+9. class TestDouble(unittest.TestCase): 
+10.     def test1(self): 
+11.         self.assertEqual(double(2), 4) # test when 2 is given as input the output is 4.
+12.         self.assertEqual(double(-3.1), -6.2) # test when -3.1 is given as input the output is -6.2.
+13.         self.assertEqual(double(0), 0) # test when 0 is given as input the output is 0.
+14. 
+15. class Testadd(unittest.TestCase): 
+16.     def test1(self): 
+17.         self.assertEqual(add(2,4), 6) # test when 2 is given as input the output is 4.
+18.         self.assertEqual(add(0,0), 0) # test when -3.1 is given as input the output is -6.2.
+19.         self.assertEqual(add(2.3,3.6), 5.9) # test when 0 is given as input the output is 0.
+20.         self.assertEqual(add('hello','world'), 'helloworld') # test when 0 is given as input the output is 0.
+21.         self.assertEqual(add(2.3000,4.300), 6.6) # test when 0 is given as input the output is 0.
+22.         self.assertNotEqual(add(-2,-2), 0) # test when 0 is given as input the output is 0.
+23. 
+24.         
+25. unittest.main()
+
+Or
+
+If __name__==‘__main__’
+    unittest.main()
+    
+
+
+
+Language test unit test
+
+import unittest
+from mymodule import frenchToEnglish, englishToFrench
+ class TestfrenchToEnglish(unittest.TestCase): 
+     def test1(self): 
+        self.assertEqual(frenchToEnglish(Bonjour), Hello) 
+         self.assertEqual(frenchToEnglish(Bonjour), Hello)  
+         
+ class TestenglishToFrench(unittest.TestCase): 
+     def test1(self): 
+         self.assertEqual(englishToFrench(Hello), Bonjour) 
+         self.assertEqual(englishToFrench(Hello), Bonjour) 
+
+unittest.main()
+
+
+Environment file
+
+
+
+Create .env file in root folder
+
+apikey=apikey
+url=https://url
+
+
+In python file use below code
+
+
+from dotenv import load_dotenv
+
+load_dotenv()
+
+
+apikey = os.environ['apikey']
+url = os.environ['url']
+
+
+
+
+
+Packaging
+
+Package
+
+A package is a collection of python modules into a dictionary with a __init__.py file which distinguishes it from just a dictionary of python scripts. The example here shows the package myproject in the parent_directory with modules, module 1 and module 2. It also contains the init file. When you import a module or a package, the corresponding object created by Python is always of type module. Note that the distinction between module and package is just at the file system level. 
+
+Create folder my math, inside create basic.py and stats.py
+
+basic.py
+def square(number):
+    """
+    This function returns the square of a given number
+    """
+    return number ** 2
+def double(number):
+    """
+    This function returns twice the value of a given number
+    """
+    return number * 2
+def add(a, b):
+    """
+    This function returns the sum of given numbers
+    """
+    return a + b
+
+Stats.py
+
+def mean(numbers):
+    """
+    This function returns the mean of the given list of numbers
+    """
+    return sum(numbers)/len(numbers)
+def median(numbers):
+    """
+    This function returns median of the given list of numbers
+    """
+    numbers.sort()
+   
+    if len(numbers) % 2 == 0:
+       median1 = numbers[len(numbers) // 2]
+       median2 = numbers[len(numbers) // 2 - 1]
+       mymedian = (median1 + median2) / 2
+    else:
+       mymedian = numbers[len(numbers) // 2]
+    return mymedian
+
+
+
+Create __init__.py
+Intailize other modules here
+1. from . import basic
+2. from . import stats
+
+python3 <opebn pythin3 just outside the my math folder>
+mymath.basic.double(3)
+
+general structure
+The general structure for testing your package is the package name dot module name dot function name followed by the parameters without the curly brackets but keeping the round brackets.
+mymath.basic.add(3,4)
+mymath.stats.mean([3,4,5,6,7])
+
+
+Library:
+
+A library is a collection of packages or it can be a single package. An example of this is numpy or pytorch
+
+
+
+Readability counts. This is an important point in the zen of Python.
+Code is read much more often than it is written. PEP8, is a document that provides guidelines to improve the readability of code and make it consistent across the wide spectrum of Python code. Here are the most important points extracted for you:
+* Prefer Spaces no tabs for indentation.
+
+* Use 4 spaces per indentation level.
+
+* Wrap lines so that they don’t exceed 79 characters.
+
+* Use blank lines to separate functions and classes, and larger blocks of code inside functions.
+
+* Put comments on a line of their own.
+
+* Use docstrings.
+
+* Use spaces around operators and after commas.
+
+* Name your functions and methods using lower_case_with_underscores.
+
+* Name your classes using CamelCase.
+
+* Name your constants in all capital letters with underscores separating words, like MAX_FILE_UPLOAD_SIZE, YEAR.
+For more information you can refer to https://www.python.org/dev/peps/pep-0008/
+
+
+
+
+Static code analysis:
+
+1. pip3 install pylint==2.11.1
+
+pylint sample1.py 
+************* Module sample1
+sample1.py:6:0: C0304: Final newline missing (missing-final-newline)
+sample1.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+sample1.py:1:0: C0116: Missing function or method docstring (missing-function-docstring)
+sample1.py:3:0: C0103: Constant name "num1" doesn't conform to UPPER_CASE naming style (invalid-name)
+sample1.py:4:0: C0103: Constant name "num2" doesn't conform to UPPER_CASE naming style (invalid-name)
+sample1.py:5:0: C0103: Constant name "total" doesn't conform to UPPER_CASE naming style (invalid-name)
+sample1.py:6:6: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+
+------------------------------------
+Your code has been rated at -1.67/10
+
+
+FIXED Code:
+
+theia@theiadocker-sudheerab:/home/project$ 
+
+'''
+Function to returnt he addituion of two numbers
+'''
+
+def add(number1, number2):
+    '''
+    Returns the addition of number1 and number2 inputs
+    '''
+    return number1 + number2
+
+
+NUM1 = 4
+NUM2 = 5
+TOTAL = add(NUM1, NUM2)
+print(f"The sum of {NUM1} and {NUM2} is {TOTAL}")
+
+
+
+Framework:
+
+
+Collection of modules or packages for specific purpose
+
+
+Django,flask
+
+Microframework: minimalistic web application frame work
+
+
+
+Methods
+
+
+
+Create.   -  POST/PUT: post : creates a new value/object on every request, PUT: create object on first request and updates the object values on next requests Read.      - Get
+Update   - Update
+Delete.    - Delete
+
+
+Flask template:
+They can be both static and dynamic. By default, the flask application looks  for the templates in a directory called ‘templates’ under the root directory. If these templates need to use images,  styling sheets, or java script files, those are stored in a folder named  static in the root directory. The static pages are rendered as is. The dynamic pages usually have information  that is filled in dynamically for each request.
+
+
+
+Route decorator
+
+@app.route(“/“) is a Python decorator that Flask provides to assign URLs in our app to functions easily. You can easily tell that the decorator is telling our @app that whenever a user visits our application’s domain, in our case, execute the home() function.
+We can handle multiple routes with a single function by just stacking additional route decorators above the method which should be invoked when the route is called. The following is a valid example of serving the same “Hello World!” message for 3 separate routes:
+* 		1
+* 		2
+* 		3
+* 		4
+* 		5
+1. @app.route("/")
+2. @app.route("/home")
+3. @app.route("/index")
+4. def home():
+5.     return "Hello World!"
+
+The route decorators also take method as a second parameter, which can be set to the type of HTTP methods, the route will support. We will learn about this in the later sections.
+The route decorator can also be more specific. For example, to get the details of a user whose userId is U0001, you may go to http://mydomain.com/userdetails/U0001. It doesn’t make sense to define a different route for each user you may be dealing with. In such cases, we define the route like this.
+* 		1
+* 		2
+* 		3
+1. @app.route("/userdetails/<userid>")
+2. def getUserDetails(userid):
+3.     return "User Details for  "+userid
+
+
+RPC vs API:
+
+https://www.geeksforgeeks.org/difference-between-rest-api-and-rpc-api/
+
+
+
+REST APIs
+It stands for Representational State Transfer (REST) is an architectural style that defines a set of constraints and protocols to be used for creating web services. REST API is a method of accessing web services in a very simple and flexible manner without having any processing. A REST API endpoint is a URL that utilizes HTTP verbs to execute CRUD (Create Read Update Delete) operations over the resources. These HTTP verbs are GET, POST, PATCH, PUT and DELETE. It focuses on providing resources from the server to the clients.  
+
+
+Advantages of REST APIs
+* They are very scalable as the client and server are decoupled easing to scale in the future.
+* Simple, standardized, and easy to use.
+* Uses already existing HTTP features.
+* They have high performance because of their cache capabilities.
+* Allows Standard-based protection with the use of OAuth protocols to verify REST requests.
+* Brings flexibility by serializing data in XML or JSON format.
+Disadvantages of REST APIs
+* REST API’s payload is quite big hence the entire files get back while you needed one field.
+* It loses the ability to maintain state in REST.
+RPC APIs
+Remote Procedure Call (RPC) is a methodology used for constructing distributed, client-server-based applications. It is also called a subroutine call or a function call. It is based on conventional local procedure calling so that the called procedure need not exist in the very same address space as the calling procedure executes. RPC is very well suited for a client-server interaction in which the flow of control lingers between the two. The client and server do not both execute at the same time instead the thread of execution jumps from one to another.
+Advantages of RPC APIs
+* They provide usage op applications in both local and distributed environments.
+* It provides ABSTRACTION.
+* They have lightweight payloads, therefore, provides high performance.
+* They are easy to understand and work as the action is part of the URL.
+Disadvantages of RPC APIs
+* It can be implemented in many ways as it is not well standardized.
+* It has no flexibility for hardware architecture.
+Following is a table of differences between REST and RPC
+S.No.	REST API	RPC API
+1	REST is resource-oriented.	RPC is action-oriented.
+2	Supports HTTP methods GET, POST, PUT, PATCH, and DELETE.	RPC only supports GET and POST requests.
+3	It provides flexibility for hardware architecture	no flexibility in RPC for hardware architecture
+4	It supports hypermedia and hyperlinks	It does not supports hypermedia and hyperlinks
+5	REST allows to specify Content-types or accept headers	Require payloads of a few data types as XML for XML-RPC.
+
+
+
+Abstraction vs Encapsulation
+
+
+Abstraction is a feature of OOPs that hides the unnecessary detail but shows the essential information.
+Encapsulation is also a feature of OOPs. It hides the code and data into a single entity or unit so that the data can be protected from the outside world. It solves an issue at the design level.
+
+
+OOPS: Object Oriented Programming language  The main principles of object-oriented programming are abstraction, encapsulation, inheritance, and polymorphism.
+
+
+Python OOPs concept-
+In this section, we will deep dive into the basic concepts of OOP. We will cover the following topics-
+1. Class
+2. Object
+3. Method
+4. Inheritance
+5. Encapsulation
+6. Polymorphism
+7. Data Abstraction
+
+
+https://www.analyticsvidhya.com/blog/2020/09/object-oriented-programming/
+
+Polymorphism
+This is a Greek word. If we break the term Polymorphism, we get “poly”-many and “morph”-forms. So Polymorphism means having many forms. In OOP it refers to the functions having the same names but carrying different functionalities.
+class Audi:
+  def description(self):
+    print("This the description function of class AUDI.")
+
+class BMW:
+  def description(self):
+    print("This the description function of class BMW.")
+audi = Audi()
+bmw = BMW()
+for car in (audi,bmw):
+ car.description()
+
+
+
+Data abstraction:
+
+We use Abstraction for hiding the internal details or implementations of a function and showing its functionalities only. This is similar to the way you know how to drive a car without knowing the background mechanism. Or you know how to turn on or off a light using a switch but you don’t know what is happening behind the socket.
+Any class with at least one abstract function is an abstract class. In order to create an abstraction class first, you need to import ABC class from abc module. This lets you create abstract methods inside it. ABC stands for Abstract Base Class.
+from abc import ABC
+
+class abs_class(ABC):
+    Body of the class
+Important thing is– you cannot create an object for the abstract class with the abstract method. For example-
+from abc import ABC, abstractmethod
+
+class Car(ABC):
+    def __init__(self,name):
+        self.name = name 
+
+ @abstractmethod
+    def price(self,x):
+        pass
+obj = Car("Honda City")
+
+Now the question is how do we use this abstraction exactly. The answer is by using inheritance.
+from abc import ABC, abstractmethod
+
+class Car(ABC):
+    def __init__(self,name):
+        self.name = name
+
+    def description(self):
+        print("This the description function of class car.")
+
+    @abstractmethod
+    def price(self,x):
+        pass
+class new(Car):
+    def price(self,x):
+        print(f"The {self.name}'s price is {x} lakhs.")
+obj = new("Honda City")
+
+obj.description()
+obj.price(25)
+
+
+Encapsulation
+Encapsulation, as I mentioned in the initial part of the article, is a way to ensure security. Basically, it hides the data from the access of outsiders. Such as if an organization wants to protect an object/information from unwanted access by clients or any unauthorized person then encapsulation is the way to ensure this.
+You can declare the methods or the attributes protected by using a single underscore ( _ ) before their names. Such as- self._name or def _method( ); Both of these lines tell that the attribute and method are protected and should not be used outside the access of the class and sub-classes but can be accessed by class methods and objects.
+Though Python uses ‘ _ ‘ just as a coding convention, it tells that you should use these attributes/methods within the scope of the class. But you can still access the variables and methods which are defined as protected, as usual.
+Now for actually preventing the access of attributes/methods from outside the scope of a class, you can use “private members“. In order to declare the attributes/method as private members, use double underscore ( __ ) in the prefix. Such as – self.__name or def __method(); Both of these lines tell that the attribute and method are private and access is not possible from outside the class.
+class car:
+
+    def __init__(self, name, mileage):
+        self._name = name                #protected variable
+        self.mileage = mileage 
+
+    def description(self):                
+        return f"The {self._name} car gives the mileage of {self.mileage}km/l"
+obj = car("BMW 7-series",39.53)
+
+#accessing protected variable via class method 
+print(obj.description())
+
+#accessing protected variable directly from outside
+print(obj._name)
+print(obj.mileage)
+
+Notice how we accessed the protected variable without any error. It is clear that access to the variable is still public. Let us see how encapsulation works-
+class Car:
+
+    def __init__(self, name, mileage):
+        self.__name = name              #private variable        
+        self.mileage = mileage 
+
+    def description(self):                
+        return f"The {self.__name} car gives the mileage of {self.mileage}km/l"
+obj = Car("BMW 7-series",39.53)
+
+#accessing private variable via class method 
+print(obj.description())
+
+#accessing private variable directly from outside
+print(obj.mileage)
+print(obj.__name)
+
+When we tried accessing the private variable using the description() method, we encountered no error. But when we tried accessing the private variable directly outside the class, then Python gave us an error stating: car object has no attribute ‘__name’.
+You can still access this attribute directly using its mangled name. Name mangling is a mechanism we use for accessing the class members from outside. The Python interpreter rewrites any identifier with “__var” as “_ClassName__var”. And using this you can access the class member from outside as well.
+class Car:
+
+    def __init__(self, name, mileage):
+        self.__name = name              #private variable        
+        self.mileage = mileage 
+
+    def description(self):                
+        return f"The {self.__name} car gives the mileage of {self.mileage}km/l"
+obj = Car("BMW 7-series",39.53)
+
+#accessing private variable via class method 
+print(obj.description())
+
+#accessing private variable directly from outside
+print(obj.mileage)
+print(obj._Car__name)      #mangled name
+
+
+Inheritance in Python Class
+
+Inheritance is the procedure in which one class inherits the attributes and methods of another class.  The class whose properties and methods are inherited is known as Parent class. And the class that inherits the properties from the parent class is the Child class.
+The interesting thing is, along with the inherited properties and methods, a child class can have its own properties and methods.
+How to inherit a parent class? Use the following syntax:
+class parent_class:
+body of parent class
+
+class child_class( parent_class):
+body of child class
+Let’s see the implementation-
+class Car:          #parent class
+
+    def __init__(self, name, mileage):
+        self.name = name 
+        self.mileage = mileage 
+
+    def description(self):                
+        return f"The {self.name} car gives the mileage of {self.mileage}km/l"
+
+class BMW(Car):     #child class
+    pass
+
+class Audi(Car):     #child class
+    def audi_desc(self):
+        return "This is the description method of class Audi."
+obj1 = BMW("BMW 7-series",39.53)
+print(obj1.description())
+
+obj2 = Audi("Audi A8 L",14)
+print(obj2.description())
+print(obj2.audi_desc())
+ 
+
+ 
+We have created two child classes namely “BMW” and “Audi” who have inherited the methods and properties of the parent class “Car”.  We have provided no additional features and methods in the class BMW. Whereas one additional method inside the class Audi.
+Notice how the instance method description() of the parent class is accessible by the objects of child classes with the help of obj1.description() and obj2.description(). And also the separate method of class Audi is also accessible using obj2.audi_desc().
+
+
