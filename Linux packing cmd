@@ -1,0 +1,107 @@
+Linux packing cmd
+
+
+Whereis binary name : get path
+
+dpkg -l binary name
+
+
+dpkg -S  binaryname: get package name
+
+Dpkg -L binary name: list all files
+
+apt show package name: list all details:
+
+
+Debian build
+
+https://www.internalpointers.com/post/build-binary-deb-package-practical-guide
+
+
+mkdir -p test/etc
+
+mkdir -p test/bin
+
+mkdir -p test/local/bin
+
+ mkdir -p test/DEBIAN
+
+ vi test/DEBIAN/control <info must be accurate as per Debian standards>
+
+Package: mzonetest
+Version: 1.0
+Architecture: amd64
+Maintainer: Internal Pointers <info@internalpointers.com>
+Description: Mzone health check debian
+
+
+
+
+vi test/local/bin/testmzone.sh
+
+chmod -R 755 test
+
+dpkg-deb --build --root-owner-group test
+
+dpkg-deb --build test
+
+sudo dpkg -i test.deb <install>
+
+sudo dpkg -r test.deb <remove>
+
+dpkg -c testscript.deb
+
+tree test
+
+lintian test.deb
+
+
+
+Remove package 
+
+
+dpkg -l |grep test <pkg name>  apt list | grep mzonetest  <pkg name>
+
+Dpkg-r mzonetest
+
+apt remove mzonetest
+
+
+Script to Cron setup 
+https://www.baeldung.com/linux/create-crontab-script
+
+
+
+sudo /bin/bash -c 'echo "30 0 * * * root /home/baeldung/job.sh" >> /etc/crontab'
+
+
+Check cron jobs
+
+
+Sudo cat  /etc/crontab
+Sudo crontab -l
+Sudo crontab -u root -l
+
+
+touch /home/baeldung/myScript3.sh
+
+e need to put the schedule line in a new file in the cron.d directory — we’ll call our file schedule. Note that in /etc/cron.d, some filenames are considered invalid. For example, if we choose schedule.sh for the filename, it will be skipped because the filename should not have any extension:
+#!/bin/bash
+sudo touch /etc/cron.d/schedule
+
+
+
+
+*/1 * * * * root /bin/bash /var/opt/platform-inventory/scripts/mzonehealthcheck/sdntool_pull.sh > /opt/sdntool/log/sdnpull.log 2>&1
+*/5 * * * * root /bin/bash /var/opt/platform-inventory/scripts/mzonehealthcheck/cron_sdntool.sh > /opt/sdntool/log/cronsdn.log 2>&1
+
+
+touch /etc/cron.d/setupmzonecron
+#/usr/bin/timeout
+/bin/bash -c 'echo "*/1 * * * * root /bin/bash /var/opt/platform-inventory/scripts/mzonehealthcheck/sdntool_pull.sh > /opt/sdntool/log/sdnpull.log 2>&1" > /etc/cron.d/setupmzonecron'
+/bin/bash -c 'echo "*/5 * * * * root /bin/bash /var/opt/platform-inventory/scripts/mzonehealthcheck/cron_sdntool.sh > /opt/sdntool/log/cronsdn.log 2>&1" >> /etc/cron.d/setupmzonecron'
+#/bin/bash -c 'echo "* * * * * root /bin/bash /opt/sdntool/temp.sh &> /opt/sdntool/log/temp.logs" >> /etc/cron.d/setupmzonecron'
+chmod 600 /etc/cron.d/setupmzonecron
+https://www.baeldung.com/linux/create-debian-package
+
+https://www.youtube.com/watch?v=5phJwNYu5wI
