@@ -57,3 +57,23 @@ curl -v –head http://127.0.0.1:8080/local-cdn/artifactory/
 Download
 
 curl -o sat-6-isos--rhel-8-x86_64-2021-09-11T00.32-06.iso 'https://access.cdn.redhat/sat-6-isos--rhel-8-x86_64-2021-09-11T00.32-06.iso?user=’
+
+
+access utl with cert
+
+curl -k --cert cert.pem --key key.pem \
+http://satellite.example.com/pulp/repos/Default_Organization/Library/content/dist/rhel/serv
+
+curl -k --cert /etc/pki/certs/dev-testsatellite-.local.crt.pem --key /etc/pki//certs//dev-testsatellite-local.key.pem https://dev-testsatellite-local/pulp/repos/Default_Organization/Library/coml
+
+
+Openssl certs
+
+https://access.redhat.com/tags/
+https://access.redhat.com/solutions/34
+
+
+echo | openssl s_client -showcerts -connect dev-testsatellite:443
+https://stackoverflow.com/questions/3478/client-ssl-with-self-signed-ca-not-working
+https://access.redhat.com/solutions/308
+
