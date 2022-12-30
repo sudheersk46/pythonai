@@ -1,0 +1,29 @@
+
+Get interface name under vnic
+
+networkendpoint: 0717-cb883b63-15f3-4ba      namespace: efd540b2613d464e8
+            floatingIP: 
+            ifName: i j jk mk
+            ipv4: 100.65.72.150
+            mac: 02:00::43
+
+
+
+
+
+sudo tcpdump -i if02003A tcp and host 100.65.72.5 -ne
+
+
+Check tc connection
+
+
+
+Tcpdump with port
+
+ sudo tcpdump -i if0202AE port 30670
+
+
+tcpdump -i any -w 2022-09-16_05:23:14.pcap -nn -s 128 -C 100 -W 100 tcp and host 52.117.144.18
+
+tcpdump -i any -nn -s 0 -C 100 -W 5 icmp -w icmp.pcap
+
