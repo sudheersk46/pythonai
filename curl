@@ -1,0 +1,59 @@
+Curl  help category
+
+curl --help -T
+
+curl --help upload <category>
+curl --help all
+Curl —manual
+
+
+Ipsec-monitoring: web hook
+
+curl -X POST -H 'Content-type: application/json' --data “{‘text’:’slack test '}" https://hooks.slack.com/services/
+
+
+curl -X POST -H 'Content-type: application/json' --data "{'text':'slack test '}" https://hooks.slack.com/services/T
+
+“Check for typo on Any errors”
+
+
+To web hook to post messages
+
+curl  -d @test.log -H 'Content-type: application/json' https://hooks.slack.com/services/Tbhbijj
+
+
+Curl -X POST -H 'Content-type: application/json'  --data "{'text':' Mzone: test ipsec  Slack stag test2'}" https://hooks.slack.com/services/T0
+
+
+curl -d "text=Hi I am a bot that can post messages to any public channel." -d "channel=C12356" -H "Authorization: Bearer xoxb-not-a-real-token-this-will-not-work" -X POST https://slack.com/api/chat.postMessage
+
+Api token to send logs
+
+curl -F file=@test.log -F "initial_comment=monitoring log file"  -F channels=C0MA -H "Authorization: Bearer
+xoxP" https://hooks.slack.com/api/files.upload
+
+curl -F file=@etcd-cluster-health.log -F "initial_comment=monitoring log file"  -F channels=C0 -H "Authorization: Bearer xoxb-" https://hooks.slack.com/api/files.upload
+
+
+
+Upload to artifactory
+
+curl  -H "X-JFrog-Art-Api:${A}" -X   -T mzonecronhealthcheck/dist/bionic/mzone-health-script_1.0_all.deb  "https://na.artifactory.swg-devops.com//"
+
+
+Upload
+
+ curl -X "PUT" "https://s3cloud/ipsectunnel/" -H 'Authorization: bearer $(cat Feb_14_03\:39\:31.token)' -H "Content-Type: application/json" -F "data=@sdn_collect_info.13834.tar.gz" 
+
+Check url status
+
+curl -k httsp://12.23.34.45
+
+curl -k httsp://12.23.34.4:8000<Has listener port 8000>
+
+curl -v –head http://127.0.0.1:8080/local-cdn/artifactory/
+
+
+Download
+
+curl -o sat-6-isos--rhel-8-x86_64-2021-09-11T00.32-06.iso 'https://access.cdn.redhat/sat-6-isos--rhel-8-x86_64-2021-09-11T00.32-06.iso?user=’
